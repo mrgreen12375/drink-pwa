@@ -1,0 +1,25 @@
+{
+  "name": "drink",
+  "version": "2.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start:dev": "concurrently \"cd public && npm run dev\"",
+    "start": "npm run build && node server.js",
+    "deploy": "gh-pages -d public/dist",
+    "build": "cd public && npm run build",
+    "install": "cd ./public && npm i",
+    "public": "cd public && npm start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "gh-pages": "^4.0.0"
+  },
+  "devDependencies": {
+    "concurrently": "^5.2.0",
+    "nodemon": "^2.0.4"
+  }
+}
